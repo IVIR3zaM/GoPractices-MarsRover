@@ -54,6 +54,10 @@ type roverCoordination struct {
 }
 
 func NewRover(input string, obstacles [][2]int) (*Rover, error) {
+	if len(input) < 2 {
+		return nil, errors.New(fmt.Sprintf("Invalid initialization command of %q", input))
+	}
+
 	str := input[1 : len(input)-1]
 	l := strings.Split(str, ", ")
 
