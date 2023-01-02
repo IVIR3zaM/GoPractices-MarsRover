@@ -1,4 +1,4 @@
-module github.com/IVIR3zaM/GoTesting/MarsRover
+module github.com/IVIR3zaM/GoPractices-MarsRover
 
 go 1.19
 
