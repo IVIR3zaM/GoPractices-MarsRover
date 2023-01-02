@@ -20,6 +20,13 @@ func (s *RoverTestSuite) SetupTest() {
 	}
 }
 
+func (s *RoverTestSuite) TestRoverInitFails() {
+	rover, err := NewRover("", nil)
+	s.NotNil(err)
+	s.ErrorContains(err, "Invalid initialization command")
+	s.Nil(rover)
+}
+
 func (s *RoverTestSuite) TestRoverOutput() {
 	s.Equal("(4, 2) EAST", s.rover.Output())
 }
