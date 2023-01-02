@@ -1,4 +1,4 @@
-package marchrover
+package rover
 
 import (
 	"encoding/json"
